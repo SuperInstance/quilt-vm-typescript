@@ -1,0 +1,18 @@
+{
+  "name": "quilt-vm",
+  "version": "0.1.0",
+  "description": "The 5-opcode Quilt VM in TypeScript. Cordis-native. Hosts cells, plugins, sheets, MUDs, TTRPGs, and the bay dance.",
+  "license": "MIT",
+  "author": "SuperInstance",
+  "main": "dist/quilt_vm.js",
+  "types": "dist/quilt_vm.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && node dist/test_quilt_vm.js",
+    "gold": "tsc && node dist/gold.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  }
+}
