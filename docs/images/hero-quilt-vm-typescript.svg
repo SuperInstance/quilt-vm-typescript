@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" width="640" height="320">
+  <defs>
+    <linearGradient id="skycity" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="60%" stop-color="#1E1B4B"/>
+      <stop offset="100%" stop-color="#312E81"/>
+    </linearGradient>
+    <linearGradient id="building" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <filter id="neon">
+      <feGaussianBlur stdDeviation="1.5" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="streets" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B4B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <!-- night sky -->
+  <rect width="640" height="320" fill="url(#skycity)"/>
+  <!-- distant stars -->
+  <g fill="#FFF" opacity="0.5">
+    <circle cx="60" cy="20" r="0.7"/>
+    <circle cx="180" cy="35" r="1.0"/>
+    <circle cx="320" cy="15" r="0.6"/>
+    <circle cx="460" cy="40" r="1.1"/>
+    <circle cx="580" cy="22" r="0.8"/>
+    <circle cx="100" cy="60" r="0.5"/>
+    <circle cx="540" cy="80" r="0.7"/>
+  </g>
+  <!-- moon -->
+  <circle cx="540" cy="55" r="22" fill="#E0E7FF" opacity="0.85"/>
+  <circle cx="535" cy="50" r="22" fill="#0F172A"/>
+  <!-- distant buildings (back row, dimmer) -->
+  <g fill="#1E1B4B" opacity="0.6">
+    <rect x="20" y="120" width="40" height="180"/>
+    <rect x="70" y="100" width="50" height="200"/>
+    <rect x="130" y="135" width="35" height="165"/>
+    <rect x="175" y="110" width="45" height="190"/>
+    <rect x="230" y="125" width="40" height="175"/>
+    <rect x="280" y="115" width="55" height="185"/>
+    <rect x="345" y="140" width="40" height="160"/>
+    <rect x="395" y="105" width="50" height="195"/>
+    <rect x="455" y="130" width="35" height="170"/>
+    <rect x="500" y="115" width="50" height="185"/>
+    <rect x="560" y="135" width="60" height="165"/>
+  </g>
+  <!-- foreground buildings, taller, with windows that hold the 5 opcodes -->
+  <g>
+    <!-- left tower: BIND, LINK -->
+    <rect x="40" y="60" width="80" height="240" fill="url(#building)"/>
+    <!-- windows: repeating BIND/LINK patterns -->
+    <g font-family="ui-monospace,monospace" font-size="7" font-weight="bold" text-anchor="middle">
+      <g fill="#3B82F6" filter="url(#neon)">
+        <rect x="48" y="78" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="59" y="89">BIND</text>
+        <rect x="78" y="78" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="89" y="89">LINK</text>
+        <rect x="48" y="100" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="59" y="111">BIND</text>
+        <rect x="78" y="100" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="89" y="111">LINK</text>
+        <rect x="48" y="122" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="59" y="133">BIND</text>
+        <rect x="78" y="122" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="89" y="133">LINK</text>
+        <rect x="48" y="144" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="59" y="155">BIND</text>
+        <rect x="78" y="144" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="89" y="155">LINK</text>
+        <rect x="48" y="166" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="59" y="177">BIND</text>
+        <rect x="78" y="166" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="89" y="177">LINK</text>
+        <rect x="48" y="188" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="59" y="199">BIND</text>
+        <rect x="78" y="188" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="89" y="199">LINK</text>
+        <rect x="48" y="210" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="59" y="221">BIND</text>
+        <rect x="78" y="210" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="89" y="221">LINK</text>
+        <rect x="48" y="232" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="59" y="243">BIND</text>
+        <rect x="78" y="232" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="89" y="243">LINK</text>
+        <rect x="48" y="254" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="59" y="265">BIND</text>
+        <rect x="78" y="254" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="89" y="265">LINK</text>
+      </g>
+    </g>
+  </g>
+  <g>
+    <!-- center tower (tallest): EFFECT, the dramatic opcode -->
+    <rect x="280" y="30" width="80" height="270" fill="url(#building)"/>
+    <g font-family="ui-monospace,monospace" font-size="7" font-weight="bold" text-anchor="middle">
+      <g fill="#A855F7" filter="url(#neon)">
+        <rect x="288" y="48" width="64" height="14" rx="2" opacity="0.9"/>
+        <text x="320" y="59">EFFECT</text>
+        <rect x="288" y="70" width="64" height="14" rx="2" opacity="0.9"/>
+        <text x="320" y="81">EFFECT</text>
+        <rect x="288" y="92" width="64" height="14" rx="2" opacity="0.9"/>
+        <text x="320" y="103">EFFECT</text>
+        <rect x="288" y="114" width="64" height="14" rx="2" opacity="0.9"/>
+        <text x="320" y="125">EFFECT</text>
+        <rect x="288" y="136" width="64" height="14" rx="2" opacity="0.9"/>
+        <text x="320" y="147">EFFECT</text>
+        <rect x="288" y="158" width="64" height="14" rx="2" opacity="0.9"/>
+        <text x="320" y="169">EFFECT</text>
+        <rect x="288" y="180" width="64" height="14" rx="2" opacity="0.9"/>
+        <text x="320" y="191">EFFECT</text>
+        <rect x="288" y="202" width="64" height="14" rx="2" opacity="0.9"/>
+        <text x="320" y="213">EFFECT</text>
+        <rect x="288" y="224" width="64" height="14" rx="2" opacity="0.9"/>
+        <text x="320" y="235">EFFECT</text>
+        <rect x="288" y="246" width="64" height="14" rx="2" opacity="0.9"/>
+        <text x="320" y="257">EFFECT</text>
+        <rect x="288" y="268" width="64" height="14" rx="2" opacity="0.9"/>
+        <text x="320" y="279">EFFECT</text>
+      </g>
+    </g>
+  </g>
+  <g>
+    <!-- right tower: VIEW, TICK -->
+    <rect x="520" y="80" width="80" height="220" fill="url(#building)"/>
+    <g font-family="ui-monospace,monospace" font-size="7" font-weight="bold" text-anchor="middle">
+      <g fill="#10B981" filter="url(#neon)">
+        <rect x="528" y="98" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="539" y="109">VIEW</text>
+        <rect x="558" y="98" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="569" y="109">TICK</text>
+        <rect x="528" y="120" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="539" y="131">VIEW</text>
+        <rect x="558" y="120" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="569" y="131">TICK</text>
+        <rect x="528" y="142" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="539" y="153">VIEW</text>
+        <rect x="558" y="142" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="569" y="153">TICK</text>
+        <rect x="528" y="164" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="539" y="175">VIEW</text>
+        <rect x="558" y="164" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="569" y="175">TICK</text>
+        <rect x="528" y="186" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="539" y="197">VIEW</text>
+        <rect x="558" y="186" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="569" y="197">TICK</text>
+        <rect x="528" y="208" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="539" y="219">VIEW</text>
+        <rect x="558" y="208" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="569" y="219">TICK</text>
+        <rect x="528" y="230" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="539" y="241">VIEW</text>
+        <rect x="558" y="230" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="569" y="241">TICK</text>
+        <rect x="528" y="252" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="539" y="263">VIEW</text>
+        <rect x="558" y="252" width="22" height="14" rx="2" opacity="0.9"/>
+        <text x="569" y="263">TICK</text>
+      </g>
+    </g>
+  </g>
+  <!-- streetlights with neon signs that name the 5 opcodes -->
+  <g font-family="ui-sans-serif,system-ui" font-size="8" font-weight="600" text-anchor="middle">
+    <line x1="180" y1="280" x2="180" y2="300" stroke="#FBBF24" stroke-width="1"/>
+    <circle cx="180" cy="278" r="3" fill="#FBBF24" filter="url(#neon)"/>
+    <line x1="220" y1="280" x2="220" y2="300" stroke="#FBBF24" stroke-width="1"/>
+    <circle cx="220" cy="278" r="3" fill="#FBBF24" filter="url(#neon)"/>
+    <line x1="420" y1="280" x2="420" y2="300" stroke="#FBBF24" stroke-width="1"/>
+    <circle cx="420" cy="278" r="3" fill="#FBBF24" filter="url(#neon)"/>
+    <line x1="460" y1="280" x2="460" y2="300" stroke="#FBBF24" stroke-width="1"/>
+    <circle cx="460" cy="278" r="3" fill="#FBBF24" filter="url(#neon)"/>
+  </g>
+  <!-- ground -->
+  <rect y="300" width="640" height="20" fill="url(#streets)"/>
+  <line x1="0" y1="305" x2="640" y2="305" stroke="#FBBF24" stroke-width="0.5" stroke-dasharray="4 4" opacity="0.5"/>
+  <!-- title -->
+  <text x="320" y="20" text-anchor="middle" fill="#E0E7FF" font-family="ui-sans-serif,system-ui" font-size="14" font-weight="600" letter-spacing="0.08em">EVERY WINDOW · FIVE Opcodes · THE CITY</text>
+</svg>
